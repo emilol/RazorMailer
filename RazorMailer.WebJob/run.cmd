@@ -1,0 +1,1 @@
+dotnet Mailer.WebJob.dll

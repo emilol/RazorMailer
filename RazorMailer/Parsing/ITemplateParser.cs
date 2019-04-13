@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace RazorMailer.WebJob.Parsing
+namespace RazorMailer.Parsing
 {
     public interface ITemplateParser
     {

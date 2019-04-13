@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
+using RazorMailer.Engine;
 
-namespace RazorMailer.WebJob.Parsing
+namespace RazorMailer.Parsing
 {
     public class TemplateParser : ITemplateParser
     {

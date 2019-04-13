@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.Hosting;
 
-namespace RazorMailer.WebJob.Parsing
+namespace RazorMailer.Engine
 {
     public class RazorMailerRazorEngine
     {

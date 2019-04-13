@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RazorMailer.WebJob.Parsing;
+using RazorMailer.Parsing;
 using SendGrid.Helpers.Mail;
 
 namespace RazorMailer.WebJob

@@ -1,9 +1,8 @@
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using RazorMailer.Models;
-using RazorMailer.WebJob.Parsing;
+using RazorMailer.Parsing;
 using SendGrid.Helpers.Mail;
 
 namespace RazorMailer.WebJob

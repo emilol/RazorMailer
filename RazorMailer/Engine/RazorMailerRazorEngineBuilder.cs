@@ -2,7 +2,7 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 
-namespace RazorMailer.WebJob.Parsing
+namespace RazorMailer.Engine
 {
     public class RazorMailerRazorEngineBuilder
     {

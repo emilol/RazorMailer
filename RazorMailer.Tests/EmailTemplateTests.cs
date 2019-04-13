@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Assent;
 using RazorMailer.Models;
-using RazorMailer.WebJob.Parsing;
+using RazorMailer.Parsing;
 using Xunit;
 
 namespace RazorMailer.Tests

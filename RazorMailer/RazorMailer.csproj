@@ -4,9 +4,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RazorCompileToolset>RazorSdk</RazorCompileToolset>
     <RazorCompileOnBuild>true</RazorCompileOnBuild>
-    <RazorTargetName>RazorMailer.Views</RazorTargetName>
     <EmbedRazorGenerateSources>true</EmbedRazorGenerateSources>
-    <GenerateRazorTargetAssemblyInfo>true</GenerateRazorTargetAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>

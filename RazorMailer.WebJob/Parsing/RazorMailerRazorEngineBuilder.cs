@@ -1,5 +1,6 @@
-﻿using System.IO;
+﻿using System.Linq;
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 
 namespace RazorMailer.WebJob.Parsing
 {
@@ -9,21 +10,16 @@ namespace RazorMailer.WebJob.Parsing
 
         public RazorMailerRazorEngineBuilder UseEmbeddedResourcesProject(Assembly viewAssembly)
         {
-            _viewAssembly = viewAssembly;
-            return this;
-        }
+            var relatedAssembly = RelatedAssemblyAttribute.GetRelatedAssemblies(viewAssembly, false).SingleOrDefault();
 
-        public RazorMailerRazorEngineBuilder UseEmbeddedResourcesProject(Assembly referencedAssembly, string viewAssemblyName)
-        {
-            if (viewAssemblyName == null)
+            if (relatedAssembly == null)
             {
-                UseEmbeddedResourcesProject(referencedAssembly);
+                _viewAssembly = viewAssembly;
+                
                 return this;
             }
 
-            var viewAssemblyLocation = Path.GetDirectoryName(referencedAssembly.Location);
-            UseEmbeddedResourcesProject(
-                Assembly.LoadFile(Path.Combine(viewAssemblyLocation, $"{viewAssemblyName}.dll")));
+            _viewAssembly = relatedAssembly;
 
             return this;
         }

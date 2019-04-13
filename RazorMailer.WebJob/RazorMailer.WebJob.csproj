@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RazorMailer.Templates\RazorMailer.csproj" />
+    <ProjectReference Include="..\RazorMailer\RazorMailer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

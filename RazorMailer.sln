@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorMailer.Tests", "RazorM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorMailer.WebJob", "RazorMailer.WebJob\RazorMailer.WebJob.csproj", "{90242AA1-7FC8-4AE5-9E7F-9FFF33C392EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorMailer", "RazorMailer.Templates\RazorMailer.csproj", "{12B9506B-803D-4072-BE0A-760E44DE568C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorMailer", "RazorMailer\RazorMailer.csproj", "{12B9506B-803D-4072-BE0A-760E44DE568C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

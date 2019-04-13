@@ -12,7 +12,7 @@ namespace RazorMailer.WebJob.Parsing
         public async Task<string> RenderAsync<TModel>(string name, TModel model)
         {
             var engine = new RazorMailerRazorEngineBuilder()
-                .UseEmbeddedResourcesProject(typeof(Program).Assembly, "RazorMailer.Views")
+                .UseEmbeddedResourcesProject(typeof(IAmARazorAssembly).Assembly)
                 .Build();
 
             return await engine.RenderAsync(name, model);

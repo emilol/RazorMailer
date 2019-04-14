@@ -32,12 +32,12 @@ namespace RazorMailer.Engine
             return await GetOutput(_viewAssembly, razorCompiledItem, model);
         }
 
-        private static async Task<string> GetOutput<TModel>(Assembly assembly, RazorCompiledItem razorCompiledItem,
-            TModel model)
+        private static async Task<string> GetOutput<TModel>(Assembly assembly, RazorCompiledItem razorCompiledItem, TModel model)
         {
             using (var output = new StringWriter())
             {
-                var razorPage = (RazorPage<TModel>) Activator.CreateInstance(assembly.GetType(razorCompiledItem.Type.FullName));
+                var compiledTemplate = assembly.GetType(razorCompiledItem.Type.FullName);
+                var razorPage = (RazorPage<TModel>) Activator.CreateInstance(compiledTemplate);
 
                 razorPage.ViewData = ViewData(model);
                 razorPage.ViewContext = new ViewContext

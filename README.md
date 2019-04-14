@@ -14,3 +14,9 @@ run the following commands from the solution root folder to add the API key to u
 	.\> cd .\RazorMailer.WebJob
 	.\RazorMailer.WebJob> dotnet user-secrets set "AzureWebJobsSendGridApiKeyName" "Your Api Key Name"
 	.\RazorMailer.WebJob> dotnet user-secrets set "AzureWebJobsSendGridApiKey" "SG._your_api_key_here"
+
+### Configure Storage account
+
+Either run the [Azure storage emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator) or configure your own storage account
+
+	.\RazorMailer.WebJob> dotnet user-secrets set "ConnectionStrings:AzureWebJobsStorage" "<insert connnectionstring here>"

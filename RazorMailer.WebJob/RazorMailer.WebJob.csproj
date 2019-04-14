@@ -7,15 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <RazorEmbeddedResource Include="Templates\*.cshtml" />
-    <EmbeddedResource Include="Templates\*.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.4" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.SendGrid" Version="3.0.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.3" />

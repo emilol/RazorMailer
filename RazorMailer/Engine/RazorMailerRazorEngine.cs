@@ -37,13 +37,18 @@ namespace RazorMailer.Engine
             using (var output = new StringWriter())
             {
                 var compiledTemplate = assembly.GetType(razorCompiledItem.Type.FullName);
-                var razorPage = (RazorPage<TModel>) Activator.CreateInstance(compiledTemplate);
+                var razorPage = (RazorPage) Activator.CreateInstance(compiledTemplate);
 
-                razorPage.ViewData = ViewData(model);
+                if (razorPage is RazorPage<TModel> page)
+                {
+                    AddViewData(page, model);
+                }
+
                 razorPage.ViewContext = new ViewContext
                 {
                     Writer = output
                 };
+
                 razorPage.DiagnosticSource = new DiagnosticListener("GetOutput");
                 razorPage.HtmlEncoder = HtmlEncoder.Default;
 
@@ -53,9 +58,9 @@ namespace RazorMailer.Engine
             }
         }
 
-        private static ViewDataDictionary<TModel> ViewData<TModel>(TModel model)
+        private static void AddViewData<TModel>(RazorPage<TModel> razorPage, TModel model)
         {
-            return new ViewDataDictionary<TModel>(
+            razorPage.ViewData = new ViewDataDictionary<TModel>(
                 new EmptyModelMetadataProvider(),
                 new ModelStateDictionary())
             {

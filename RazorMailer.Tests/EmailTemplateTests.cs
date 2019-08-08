@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Assent;
 using RazorMailer.Models;
@@ -39,6 +40,20 @@ namespace RazorMailer.Tests
 
             // Assert
             this.Assent(result);
+        }
+
+        [Fact]
+        public async Task MissingModel()
+        {
+            // Arrange
+            var template = "/Templates/HelloWorld.cshtml";
+            var templateParser = new TemplateParser();
+
+            // Act
+            async Task RenderMissingModel() => await templateParser.RenderAsync(template);
+
+            // Assert
+            await Assert.ThrowsAsync<NullReferenceException>(RenderMissingModel);
         }
     }
 }
